@@ -1,0 +1,88 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "about_content": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Who We Are",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>idk. CLUB represents the intersection of streetwear and contemporary culture. We create pieces that speak to the modern urbanite - those who appreciate both comfort and style, simplicity and statement.</p><p>Our designs are born from the idea that you don't need to follow every trend to make an impact. Sometimes the best statement is knowing when to say 'idk.' - embracing the beauty of uncertainty and the confidence to be yourself.</p><p>From our signature hoodies to our carefully curated basics, every piece is designed with intention, crafted with care, and created for those who understand that true style comes from within.</p>"
+          }
+        }
+      },
+      "block_order": ["heading", "text"],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "values": {
+      "type": "multicolumn",
+      "blocks": {
+        "value_1": {
+          "type": "column",
+          "settings": {
+            "title": "Quality First",
+            "text": "<p>We believe in creating pieces that last. Every garment is carefully constructed using premium materials and thoughtful design.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "value_2": {
+          "type": "column",
+          "settings": {
+            "title": "Conscious Creating",
+            "text": "<p>Our commitment extends beyond fashion. We're dedicated to sustainable practices and ethical production methods.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "value_3": {
+          "type": "column",
+          "settings": {
+            "title": "Community Driven",
+            "text": "<p>idk. CLUB is more than a brand - it's a community of individuals who embrace authenticity and celebrate uniqueness.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": ["value_1", "value_2", "value_3"],
+      "settings": {
+        "title": "Our Values",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-1",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": ["main", "about_content", "values"]
+}

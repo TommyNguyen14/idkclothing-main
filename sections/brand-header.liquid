@@ -1,0 +1,28 @@
+{%- if settings.enable_brand_header -%}
+<div class="idk-brand-header">
+  <div class="idk-brand-text">
+    {{ settings.brand_header_text | default: "idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB" }}
+  </div>
+</div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Brand Header",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "brand_text",
+      "default": "idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB",
+      "label": "Brand text to scroll"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Header"
+    }
+  ]
+}
+{% endschema %}

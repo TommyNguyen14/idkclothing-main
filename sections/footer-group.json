@@ -1,1 +1,59 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","custom_css":[],"settings":{"color_scheme":"background-2","newsletter_enable":true,"newsletter_heading":"Subscribe to our newsletter","enable_follow_on_shop":true,"show_social":true,"enable_country_selector":true,"enable_language_selector":true,"payment_enable":true,"show_policy":true,"margin_top":0,"padding_top":80,"padding_bottom":80}}},"order":["footer"]}
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "footer_about": {
+          "type": "link_list",
+          "settings": {
+            "heading": "About",
+            "menu": "footer-about"
+          }
+        },
+        "footer_others": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Others",
+            "menu": "footer-others"
+          }
+        },
+        "footer_terms": {
+          "type": "link_list",
+          "settings": {
+            "heading": "T&C",
+            "menu": "footer-terms"
+          }
+        },
+        "newsletter": {
+          "type": "email_signup",
+          "settings": {
+            "heading": "Get 10% off your first order by joining the club."
+          }
+        }
+      },
+      "block_order": [
+        "footer_about",
+        "footer_others", 
+        "footer_terms",
+        "newsletter"
+      ],
+      "settings": {
+        "color_scheme": "background-2",
+        "newsletter_enable": true,
+        "newsletter_heading": "Stay updated about the latest releases and get exclusive deals :-)",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": true,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": ["footer"]
+}

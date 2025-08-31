@@ -1451,5 +1451,92 @@
         "default": "scheme-1"
       }
     ]
+  },
+  {
+    "name": "idk. CLUB Settings",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Brand Header"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_brand_header",
+        "default": true,
+        "label": "Enable scrolling brand header"
+      },
+      {
+        "type": "text",
+        "id": "brand_header_text",
+        "default": "idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB",
+        "label": "Brand header text"
+      },
+      {
+        "type": "header",
+        "content": "Age Verification"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_age_verification",
+        "default": true,
+        "label": "Enable age verification popup"
+      },
+      {
+        "type": "text",
+        "id": "age_verification_heading",
+        "default": "Confirm your age",
+        "label": "Age verification heading"
+      },
+      {
+        "type": "textarea",
+        "id": "age_verification_text",
+        "default": "Are you 18 years old or older?",
+        "label": "Age verification message"
+      },
+      {
+        "type": "header",
+        "content": "Collection Settings"
+      },
+      {
+        "type": "collection",
+        "id": "best_sellers_collection",
+        "label": "Best Sellers Collection"
+      },
+      {
+        "type": "collection",
+        "id": "summer_tees_collection",
+        "label": "Summer Tees Collection"
+      },
+      {
+        "type": "collection",
+        "id": "basics_collection",
+        "label": "Basics Collection"
+      },
+      {
+        "type": "collection",
+        "id": "hoodies_collection",
+        "label": "Hoodies Collection"
+      },
+      {
+        "type": "collection",
+        "id": "denim_collection",
+        "label": "Denim Collection"
+      },
+      {
+        "type": "collection",
+        "id": "knitwear_collection",
+        "label": "Knitwear Collection"
+      },
+      {
+        "type": "collection",
+        "id": "bottoms_collection",
+        "label": "Bottoms Collection"
+      },
+      {
+        "type": "collection",
+        "id": "small_goods_collection",
+        "label": "Small Goods Collection"
+      }
+    ]
   }
 ]

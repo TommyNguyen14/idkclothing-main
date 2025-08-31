@@ -1,0 +1,109 @@
+{%- if settings.enable_age_verification -%}
+{{ 'component-age-verification.css' | asset_url | stylesheet_tag }}
+
+<div id="age-verification-modal" class="age-verification-modal" style="display: none;">
+  <div class="age-verification-overlay">
+    <div class="age-verification-content">
+      <div class="age-verification-header">
+        <h2>{{ settings.age_verification_heading | default: 'Confirm your age' }}</h2>
+      </div>
+      
+      <div class="age-verification-body">
+        <p>{{ settings.age_verification_text | default: 'Are you 18 years old or older?' }}</p>
+      </div>
+      
+      <div class="age-verification-actions">
+        <button id="age-verification-no" class="btn btn-secondary">
+          No I'm not
+        </button>
+        <button id="age-verification-yes" class="btn btn-primary">
+          Yes I am
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="age-verification-underage" class="age-verification-modal" style="display: none;">
+  <div class="age-verification-overlay">
+    <div class="age-verification-content">
+      <div class="age-verification-header">
+        <h2>Come back when you're older</h2>
+      </div>
+      
+      <div class="age-verification-body">
+        <p>Sorry, the content of this store can't be seen by a younger audience. Come back when you're older.</p>
+      </div>
+      
+      <div class="age-verification-actions">
+        <button id="age-verification-retry" class="btn btn-primary">
+          Oops, I entered incorrectly
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('age-verification-modal');
+    const underageModal = document.getElementById('age-verification-underage');
+    const yesButton = document.getElementById('age-verification-yes');
+    const noButton = document.getElementById('age-verification-no');
+    const retryButton = document.getElementById('age-verification-retry');
+    
+    // Check if user has already verified their age
+    const ageVerified = localStorage.getItem('idk-age-verified');
+    
+    if (!ageVerified) {
+      // Show the age verification modal after a short delay
+      setTimeout(() => {
+        modal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+      }, 1000);
+    }
+    
+    // Handle Yes button click
+    yesButton.addEventListener('click', function() {
+      localStorage.setItem('idk-age-verified', 'true');
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
+    
+    // Handle No button click
+    noButton.addEventListener('click', function() {
+      modal.style.display = 'none';
+      underageModal.style.display = 'block';
+    });
+    
+    // Handle retry button click
+    retryButton.addEventListener('click', function() {
+      underageModal.style.display = 'none';
+      modal.style.display = 'block';
+    });
+    
+    // Prevent closing modal by clicking outside or pressing escape
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        e.preventDefault();
+        return false;
+      }
+    });
+    
+    underageModal.addEventListener('click', function(e) {
+      if (e.target === underageModal) {
+        e.preventDefault();
+        return false;
+      }
+    });
+
+    // Disable escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && (modal.style.display === 'block' || underageModal.style.display === 'block')) {
+        e.preventDefault();
+        return false;
+      }
+    });
+  });
+</script>
+{%- endif -%}
