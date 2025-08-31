@@ -13,6 +13,15 @@
   "sections": {
     "header": {
       "type": "header",
+      "blocks": {
+        "shop_shop_login_button_app_block_fVcN7r": {
+          "type": "shopify://apps/shop/blocks/shop-login-button-app-block/7cab7c4a-1dfc-4b7e-8e53-31f104f2fa4e",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "shop_shop_login_button_app_block_fVcN7r"
+      ],
       "custom_css": [],
       "settings": {
         "logo_position": "middle-center",
