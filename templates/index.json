@@ -9,25 +9,21 @@
  */
 {
   "sections": {
-    "shop_dropdown_images": {
-      "type": "shop-dropdown-images",
-      "settings": {}
-    },
     "best_sellers_section": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "BEST SELLERS",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "link",
-        "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
         "image_shape": "default",
@@ -41,7 +37,6 @@
         "padding_bottom": 0
       }
     },
-
     "basics_collection_header": {
       "type": "rich-text",
       "blocks": {
@@ -53,7 +48,9 @@
           }
         }
       },
-      "block_order": ["heading"],
+      "block_order": [
+        "heading"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -66,18 +63,18 @@
     "basics_collection_products": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 8,
         "title": "",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
         "columns_desktop": 4,
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "link",
-        "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
         "image_shape": "default",
@@ -102,7 +99,9 @@
           }
         }
       },
-      "block_order": ["heading"],
+      "block_order": [
+        "heading"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -118,7 +117,6 @@
         "look_1": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "SHOP THIS LOOK",
             "text": "",
             "link_label": "",
@@ -128,8 +126,7 @@
         "look_2": {
           "type": "column",
           "settings": {
-            "image": "",
-            "title": "SHOP THIS LOOK", 
+            "title": "SHOP THIS LOOK",
             "text": "",
             "link_label": "",
             "link": ""
@@ -138,7 +135,6 @@
         "look_3": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "SHOP THIS LOOK",
             "text": "",
             "link_label": "",
@@ -148,7 +144,6 @@
         "look_4": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "SHOP THIS LOOK",
             "text": "",
             "link_label": "",
@@ -158,7 +153,6 @@
         "look_5": {
           "type": "column",
           "settings": {
-            "image": "",
             "title": "SHOP THIS LOOK",
             "text": "",
             "link_label": "",
@@ -166,17 +160,23 @@
           }
         }
       },
-      "block_order": ["look_1", "look_2", "look_3", "look_4", "look_5"],
+      "block_order": [
+        "look_1",
+        "look_2",
+        "look_3",
+        "look_4",
+        "look_5"
+      ],
       "settings": {
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "portrait",
+        "button_label": "",
+        "button_link": "",
         "columns_desktop": 5,
         "column_alignment": "center",
         "background_style": "none",
-        "button_label": "",
-        "button_link": "",
         "color_scheme": "background-1",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
@@ -187,18 +187,18 @@
     "featured_products_grid": {
       "type": "featured-collection",
       "settings": {
+        "collection": "all",
+        "products_to_show": 10,
         "title": "",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
         "description_style": "body",
-        "collection": "all",
-        "products_to_show": 10,
         "columns_desktop": 5,
+        "enable_desktop_slider": false,
         "full_width": false,
         "show_view_all": false,
         "view_all_style": "solid",
-        "enable_desktop_slider": false,
         "color_scheme": "background-1",
         "image_ratio": "portrait",
         "image_shape": "default",
@@ -214,7 +214,6 @@
     }
   },
   "order": [
-    "shop_dropdown_images",
     "best_sellers_section",
     "basics_collection_header",
     "basics_collection_products",
