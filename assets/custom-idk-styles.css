@@ -28,10 +28,29 @@
   }
 }
 
-/* Mobile navigation adjustments */
+/* Header and Navigation Responsive Adjustments */
+@media screen and (max-width: 989px) {
+  .header__inline-menu {
+    display: none;
+  }
+  
+  .menu-drawer-container {
+    display: block;
+  }
+}
+
 @media screen and (max-width: 749px) {
   .header__heading-logo-wrapper {
     max-width: 80px;
+  }
+  
+  .idk-brand-header {
+    padding: 0.8rem 0;
+  }
+  
+  .idk-brand-text {
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
   }
 }
 

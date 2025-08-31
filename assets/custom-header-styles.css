@@ -1,0 +1,282 @@
+/* Custom Header Styles to match DRMERS CLUB */
+
+/* Header positioning and layout */
+.header-wrapper {
+  position: relative;
+  z-index: 101;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: rgb(var(--color-background));
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+/* Logo positioning */
+.header__heading {
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.header__heading-logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.header__heading-logo {
+  max-height: 40px;
+  width: auto;
+}
+
+/* Navigation styling */
+.header__inline-menu {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.list-menu--inline {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__menu-item {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+}
+
+.header__menu-item:hover {
+  color: rgba(var(--color-foreground), 0.7);
+}
+
+/* Mega menu styling */
+.mega-menu {
+  position: relative;
+}
+
+.mega-menu__content {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  background: rgb(var(--color-background));
+  border: 1px solid rgba(var(--color-foreground), 0.1);
+  box-shadow: 0 4px 20px rgba(var(--color-foreground), 0.1);
+  border-radius: 4px;
+  padding: 1rem 0;
+  z-index: 1000;
+  margin-top: 8px;
+}
+
+.mega-menu__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mega-menu__link {
+  display: block;
+  padding: 8px 20px;
+  color: rgba(var(--color-foreground), 0.8);
+  text-decoration: none;
+  font-size: 1.3rem;
+  transition: all 0.2s ease;
+}
+
+.mega-menu__link:hover {
+  background-color: rgba(var(--color-foreground), 0.05);
+  color: rgb(var(--color-foreground));
+}
+
+/* Header icons */
+.header__icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 0 0 auto;
+}
+
+.header__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.header__icon:hover {
+  color: rgba(var(--color-foreground), 0.7);
+}
+
+.header__icon .svg-wrapper {
+  width: 20px;
+  height: 20px;
+}
+
+/* Cart icon with bubble */
+.cart-count-bubble {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: rgb(var(--color-button));
+  color: rgb(var(--color-button-label));
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* Search functionality */
+.header__search {
+  position: relative;
+}
+
+/* Mobile menu drawer */
+.menu-drawer {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100vh;
+  background: rgb(var(--color-background));
+  transition: left 0.3s ease;
+  z-index: 1001;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.menu-drawer.open {
+  left: 0;
+}
+
+.menu-drawer__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-drawer__menu-item {
+  border-bottom: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+.menu-drawer__menu-item a {
+  display: block;
+  padding: 1rem 0;
+  color: rgb(var(--color-foreground));
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+/* Hamburger menu icon */
+.header__menu-drawer-button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.header__menu-drawer-button .svg-wrapper {
+  width: 20px;
+  height: 20px;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 989px) {
+  .header__inline-menu {
+    display: none;
+  }
+  
+  .header__menu-drawer-button {
+    display: block;
+  }
+  
+  .header {
+    padding: 8px 16px;
+  }
+  
+  .header__icons {
+    gap: 0.5rem;
+  }
+  
+  .header__icon {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .header__heading-logo {
+    max-height: 32px;
+  }
+  
+  .list-menu--inline {
+    gap: 1.5rem;
+  }
+  
+  .header__menu-item {
+    font-size: 1.3rem;
+  }
+}
+
+/* Sticky header adjustments */
+.shopify-section-header-sticky .header {
+  box-shadow: 0 2px 10px rgba(var(--color-foreground), 0.1);
+}
+
+/* Active menu state */
+.header__active-menu-item {
+  color: rgb(var(--color-button));
+}
+
+/* Focus states for accessibility */
+.header__menu-item:focus-visible,
+.header__icon:focus-visible {
+  outline: 2px solid rgb(var(--color-button));
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Animation for mega menu */
+.mega-menu[open] .mega-menu__content {
+  animation: fadeInDown 0.2s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
