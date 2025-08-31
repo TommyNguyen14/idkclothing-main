@@ -258,6 +258,7 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'custom-idk-styles.css' | asset_url | stylesheet_tag }}
     {{ 'custom-header-styles.css' | asset_url | stylesheet_tag }}
+    {{ 'product-card-drmers-style.css' | asset_url | stylesheet_tag }}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
@@ -306,7 +307,7 @@
     </a>
 
     {%- if settings.cart_type == 'drawer' -%}
-      {%- render 'cart-drawer' -%}
+      {%- render 'cart-drawer-drmers' -%}
     {%- endif -%}
 
     {% sections 'header-group' %}
@@ -316,8 +317,6 @@
     </main>
 
     {% sections 'footer-group' %}
-
-    {%- render 'age-verification' -%}
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>

@@ -86,9 +86,9 @@
   border-top: 1px solid rgba(var(--color-foreground), 0.1);
 }
 
-/* Age verification modal z-index fix */
-.age-verification-modal {
-  z-index: 10000 !important;
+/* Cart drawer z-index */
+.cart-drawer {
+  z-index: 1000;
 }
 
 /* Custom scrollbar for webkit browsers */

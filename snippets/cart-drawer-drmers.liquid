@@ -1,0 +1,169 @@
+{% comment %}
+  DRMERS CLUB Style Cart Drawer
+{% endcomment %}
+
+{{ 'cart-drawer-drmers-style.css' | asset_url | stylesheet_tag }}
+
+<div id="cart-drawer-overlay" class="cart-drawer__overlay"></div>
+
+<div id="cart-drawer" class="cart-drawer">
+  <div class="cart-drawer__header">
+    <h2 class="cart-drawer__title">Cart<span id="cart-count">({{ cart.item_count }})</span></h2>
+    <button class="cart-drawer__close" id="cart-drawer-close">Close cart</button>
+  </div>
+
+  <div class="cart-drawer__content">
+    {% if cart.item_count == 0 %}
+      <div class="cart-drawer__empty">
+        <h2>your cart is empty.</h2>
+        <a href="{{ collections.all.url }}" class="cart-drawer__empty-link">Shop All Products</a>
+        <p class="cart-drawer__shipping-note">Worldwide Shipping Available.</p>
+      </div>
+    {% else %}
+      <div class="cart-drawer__complete-look">
+        <h3>Complete the look</h3>
+      </div>
+
+      <div class="cart-drawer__items">
+        {% for item in cart.items %}
+          <div class="cart-item" data-line="{{ forloop.index }}">
+            {% if item.image %}
+              <img src="{{ item.image | image_url: width: 160 }}" alt="{{ item.title }}" class="cart-item__image">
+            {% endif %}
+            
+            <div class="cart-item__details">
+              <h4 class="cart-item__title">{{ item.product.title }}</h4>
+              {% if item.variant.title != 'Default Title' %}
+                <p class="cart-item__variant">{{ item.variant.title }}</p>
+              {% endif %}
+              <p class="cart-item__price">{{ item.final_price | money }}</p>
+              
+              <div class="cart-item__quantity">
+                <button class="quantity-minus" data-line="{{ forloop.index }}">-</button>
+                <input type="number" value="{{ item.quantity }}" min="1" class="quantity-input" data-line="{{ forloop.index }}">
+                <button class="quantity-plus" data-line="{{ forloop.index }}">+</button>
+              </div>
+            </div>
+            
+            <button class="cart-item__remove" data-line="{{ forloop.index }}">×</button>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+
+  {% if cart.item_count > 0 %}
+    <div class="cart-drawer__footer">
+      <div class="cart-drawer__subtotal">
+        <span class="cart-drawer__subtotal-label">Subtotal</span>
+        <span class="cart-drawer__subtotal-price">{{ cart.total_price | money }}</span>
+      </div>
+      
+      <div class="cart-drawer__shipping">
+        <span>Shipping</span>
+        <span class="cart-drawer__shipping-free">$0.00 (FREE)</span>
+      </div>
+      
+      <button class="cart-drawer__checkout" onclick="window.location.href='/checkout'">
+        Secure Checkout
+      </button>
+      
+      <p class="cart-drawer__shipping-note">Worldwide Shipping Available.</p>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cartDrawer = document.getElementById('cart-drawer');
+  const cartOverlay = document.getElementById('cart-drawer-overlay');
+  const cartClose = document.getElementById('cart-drawer-close');
+  const cartIcon = document.getElementById('cart-icon-bubble');
+
+  // Open cart drawer
+  if (cartIcon) {
+    cartIcon.addEventListener('click', function(e) {
+      e.preventDefault();
+      openCartDrawer();
+    });
+  }
+
+  // Close cart drawer
+  if (cartClose) {
+    cartClose.addEventListener('click', function() {
+      closeCartDrawer();
+    });
+  }
+
+  if (cartOverlay) {
+    cartOverlay.addEventListener('click', function() {
+      closeCartDrawer();
+    });
+  }
+
+  function openCartDrawer() {
+    cartDrawer.classList.add('open');
+    cartOverlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeCartDrawer() {
+    cartDrawer.classList.remove('open');
+    cartOverlay.classList.remove('open');
+    document.body.style.overflow = 'auto';
+  }
+
+  // Quantity updates
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('quantity-plus')) {
+      const line = e.target.dataset.line;
+      const input = document.querySelector(`input[data-line="${line}"]`);
+      const newQuantity = parseInt(input.value) + 1;
+      updateQuantity(line, newQuantity);
+    }
+    
+    if (e.target.classList.contains('quantity-minus')) {
+      const line = e.target.dataset.line;
+      const input = document.querySelector(`input[data-line="${line}"]`);
+      const newQuantity = Math.max(1, parseInt(input.value) - 1);
+      updateQuantity(line, newQuantity);
+    }
+    
+    if (e.target.classList.contains('cart-item__remove')) {
+      const line = e.target.dataset.line;
+      updateQuantity(line, 0);
+    }
+  });
+
+  // Handle quantity input changes
+  document.addEventListener('change', function(e) {
+    if (e.target.classList.contains('quantity-input')) {
+      const line = e.target.dataset.line;
+      const newQuantity = parseInt(e.target.value);
+      updateQuantity(line, newQuantity);
+    }
+  });
+
+  function updateQuantity(line, quantity) {
+    fetch('/cart/change.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest'
+      },
+      body: JSON.stringify({
+        line: parseInt(line),
+        quantity: quantity
+      })
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Reload the cart drawer content
+      location.reload();
+    })
+    .catch(error => {
+      console.error('Error updating cart:', error);
+    });
+  }
+});
+</script>

@@ -1471,28 +1471,7 @@
         "default": "idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB idk. CLUB",
         "label": "Brand header text"
       },
-      {
-        "type": "header",
-        "content": "Age Verification"
-      },
-      {
-        "type": "checkbox",
-        "id": "enable_age_verification",
-        "default": true,
-        "label": "Enable age verification popup"
-      },
-      {
-        "type": "text",
-        "id": "age_verification_heading",
-        "default": "Confirm your age",
-        "label": "Age verification heading"
-      },
-      {
-        "type": "textarea",
-        "id": "age_verification_text",
-        "default": "Are you 18 years old or older?",
-        "label": "Age verification message"
-      },
+
       {
         "type": "header",
         "content": "Collection Settings"
