@@ -1,5 +1,27 @@
 /* Custom styles for idk. club website */
 
+/* Global Button and Input Styling - Remove All Rounding */
+button,
+.btn,
+.button,
+input[type="submit"],
+input[type="button"],
+input[type="email"],
+input[type="text"],
+input[type="search"],
+input[type="number"],
+select,
+textarea,
+.field__input,
+.search__input,
+.newsletter-form__button,
+.quick-add-button,
+.cart-drawer__checkout,
+.cart-item__quantity button,
+.cart-item__quantity input {
+  border-radius: 0 !important;
+}
+
 /* Repeating brand header */
 .idk-brand-header {
   background-color: rgb(var(--color-background));

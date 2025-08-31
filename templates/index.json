@@ -41,34 +41,7 @@
         "padding_bottom": 0
       }
     },
-    "summer_tees_section": {
-      "type": "featured-collection", 
-      "settings": {
-        "title": "SUMMER TEES",
-        "heading_size": "h1",
-        "description": "",
-        "show_description": false,
-        "description_style": "body",
-        "collection": "all",
-        "products_to_show": 8,
-        "columns_desktop": 4,
-        "full_width": false,
-        "show_view_all": true,
-        "view_all_style": "link",
-        "enable_desktop_slider": false,
-        "color_scheme": "background-1",
-        "image_ratio": "portrait",
-        "image_shape": "default",
-        "show_secondary_image": true,
-        "show_vendor": false,
-        "show_rating": false,
-        "quick_add": "standard",
-        "columns_mobile": "2",
-        "swipe_on_mobile": true,
-        "padding_top": 40,
-        "padding_bottom": 0
-      }
-    },
+
     "basics_collection_header": {
       "type": "rich-text",
       "blocks": {
@@ -243,7 +216,6 @@
   "order": [
     "shop_dropdown_images",
     "best_sellers_section",
-    "summer_tees_section", 
     "basics_collection_header",
     "basics_collection_products",
     "shop_the_look_header",

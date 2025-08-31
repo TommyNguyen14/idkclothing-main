@@ -1,4 +1,4 @@
-/* DRMERS CLUB Style Product Cards */
+/* DRMERS CLUB Style Product Cards - Match Shopify Default */
 
 .card-wrapper {
   position: relative;
@@ -30,7 +30,7 @@
   display: block;
 }
 
-/* Ensure images load properly */
+/* Ensure images load properly - Match Shopify Default */
 .media img {
   width: 100%;
   height: 100%;
@@ -196,6 +196,7 @@
   transition: all 0.3s ease;
   white-space: nowrap;
   color: rgb(var(--color-foreground));
+  border-radius: 0;
 }
 
 .card-wrapper:hover .quick-add-button {

@@ -30,7 +30,7 @@
 }
 
 .header__heading-logo {
-  max-height: 45px;
+  max-height: 55px;
   width: auto;
 }
 
@@ -85,10 +85,10 @@
   background: rgb(var(--color-background));
   border: 1px solid rgba(var(--color-foreground), 0.1);
   box-shadow: 0 4px 20px rgba(var(--color-foreground), 0.1);
-  border-radius: 4px;
+  border-radius: 0;
   padding: 1rem 0;
   z-index: 1000;
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .mega-menu__list {
@@ -120,28 +120,7 @@
   gap: 1.5rem;
 }
 
-/* FAQ Link Styling */
-.header__icon--faq {
-  background: none;
-  border: none;
-  padding: 0;
-  width: auto;
-  height: auto;
-}
 
-.header__faq-text {
-  font-size: 1.3rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08rem;
-  color: rgb(var(--color-foreground));
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.header__icon--faq:hover .header__faq-text {
-  color: rgba(var(--color-foreground), 0.7);
-}
 
 .header__icon {
   display: flex;
@@ -153,6 +132,7 @@
   text-decoration: none;
   transition: color 0.2s ease;
   position: relative;
+  border-radius: 0;
 }
 
 .header__icon:hover {
@@ -181,9 +161,34 @@
   font-weight: 500;
 }
 
+/* Ensure cart icon matches other icons */
+.header__icon--cart {
+  width: 44px !important;
+  height: 44px !important;
+}
+
 /* Search functionality */
 .header__search {
   position: relative;
+}
+
+/* Remove rounding from search input */
+.header__search input,
+.header__search .field__input,
+.header__search .search__input {
+  border-radius: 0 !important;
+}
+
+/* Remove rounding from all buttons */
+button,
+.btn,
+.button,
+input[type="submit"],
+input[type="button"],
+.newsletter-form__button,
+.quick-add-button,
+.cart-drawer__checkout {
+  border-radius: 0 !important;
 }
 
 /* Mobile menu drawer */
@@ -262,6 +267,7 @@
   transition: color 0.2s ease;
   text-transform: uppercase;
   letter-spacing: 0.05rem;
+  border-radius: 0;
 }
 
 .mega-menu__link:hover {
@@ -312,7 +318,7 @@
 
 @media screen and (max-width: 749px) {
   .header__heading-logo {
-    max-height: 32px;
+    max-height: 40px;
   }
   
   .list-menu--inline {
