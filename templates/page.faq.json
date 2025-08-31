@@ -4,77 +4,18 @@
       "type": "main-page",
       "settings": {
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 12
       }
     },
     "faq_content": {
-      "type": "collapsible-content",
-      "blocks": {
-        "faq_1": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "What is your return policy?",
-            "row_content": "<p>We offer a 30-day return policy for all unworn items with original tags. Items must be in their original condition to be eligible for return. Please contact our customer service team to initiate a return.</p>",
-            "page": ""
-          }
-        },
-        "faq_2": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How do I find my size?",
-            "row_content": "<p>We provide detailed size charts for each product category. You can find the size guide on each product page or in our sizing guide section. If you're between sizes, we generally recommend sizing up for a more relaxed fit.</p>",
-            "page": ""
-          }
-        },
-        "faq_3": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Do you ship internationally?",
-            "row_content": "<p>Yes! We ship worldwide. Shipping costs and delivery times vary by location. You can see exact shipping costs and estimated delivery times at checkout before completing your order.</p>",
-            "page": ""
-          }
-        },
-        "faq_4": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "How should I care for my idk. CLUB items?",
-            "row_content": "<p>To keep your items looking their best, we recommend washing in cold water, inside out, with like colors. Avoid bleach and tumble dry on low heat or hang dry when possible. Detailed care instructions are included with each item.</p>",
-            "page": ""
-          }
-        },
-        "faq_5": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "When will my order ship?",
-            "row_content": "<p>Orders typically ship within 1-2 business days. You'll receive a tracking number via email once your order ships. Express shipping options are available at checkout for faster delivery.</p>",
-            "page": ""
-          }
-        },
-        "faq_6": {
-          "type": "collapsible_row",
-          "settings": {
-            "heading": "Can I track my order?",
-            "row_content": "<p>Absolutely! Once your order ships, you'll receive a tracking number via email. You can also log into your account to track all your orders and view order history.</p>",
-            "page": ""
-          }
-        }
-      },
-      "block_order": ["faq_1", "faq_2", "faq_3", "faq_4", "faq_5", "faq_6"],
+      "type": "custom-liquid",
       "settings": {
-        "caption": "",
-        "heading": "Frequently Asked Questions",
-        "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
-        "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
-        "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "custom_liquid": "<div class='page-width' style='padding: 60px 0;'><h1 style='text-align: center; margin-bottom: 40px; font-size: 2.4rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1rem;'>Frequently Asked Questions</h1><div style='max-width: 800px; margin: 0 auto;'><div style='margin-bottom: 30px;'><h3 style='font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: rgb(var(--color-foreground));'>What is idk. CLUB?</h3><p style='font-size: 1.4rem; line-height: 1.6; color: rgba(var(--color-foreground), 0.8);'>idk. CLUB is a premium streetwear brand that creates high-quality, comfortable clothing for those who appreciate minimalist design and exceptional craftsmanship.</p></div><div style='margin-bottom: 30px;'><h3 style='font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: rgb(var(--color-foreground));'>How do I track my order?</h3><p style='font-size: 1.4rem; line-height: 1.6; color: rgba(var(--color-foreground), 0.8);'>Once your order ships, you'll receive a tracking number via email. You can also track your order by logging into your account and visiting the order history section.</p></div><div style='margin-bottom: 30px;'><h3 style='font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: rgb(var(--color-foreground));'>What is your return policy?</h3><p style='font-size: 1.4rem; line-height: 1.6; color: rgba(var(--color-foreground), 0.8);'>We offer easy exchanges and returns within 30 days of purchase. Items must be unworn, unwashed, and in their original packaging with all tags attached.</p></div><div style='margin-bottom: 30px;'><h3 style='font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: rgb(var(--color-foreground));'>Do you ship worldwide?</h3><p style='font-size: 1.4rem; line-height: 1.6; color: rgba(var(--color-foreground), 0.8);'>Yes! We offer worldwide shipping to most countries. Shipping costs and delivery times vary by location.</p></div><div style='margin-bottom: 30px;'><h3 style='font-size: 1.6rem; font-weight: 600; margin-bottom: 15px; color: rgb(var(--color-foreground));'>How do I join the club?</h3><p style='font-size: 1.4rem; line-height: 1.6; color: rgba(var(--color-foreground), 0.8);'>Sign up for our newsletter to get 10% off your first order and stay updated about the latest releases and exclusive deals.</p></div></div></div>"
       }
     }
   },
-  "order": ["main", "faq_content"]
+  "order": [
+    "main",
+    "faq_content"
+  ]
 }

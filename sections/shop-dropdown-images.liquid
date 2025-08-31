@@ -1,0 +1,128 @@
+{% comment %}
+  Shop Dropdown Images Section - matches DRMERS CLUB layout
+{% endcomment %}
+
+{{ 'component-image-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="shop-dropdown-images page-width">
+  <div class="shop-dropdown-grid">
+    <!-- ALL HOODIES Image -->
+    <div class="shop-dropdown-item">
+      <div class="shop-dropdown-image">
+        <img 
+          src="{{ 'hoodie-promo.jpg' | asset_url }}" 
+          alt="ALL HOODIES"
+          loading="lazy"
+          width="600"
+          height="800"
+        >
+        <div class="shop-dropdown-overlay">
+          <h2>ALL HOODIES</h2>
+        </div>
+      </div>
+    </div>
+    
+    <!-- BEST SELLERS Image -->
+    <div class="shop-dropdown-item">
+      <div class="shop-dropdown-image">
+        <img 
+          src="{{ 'best-sellers-promo.jpg' | asset_url }}" 
+          alt="BEST SELLERS"
+          loading="lazy"
+          width="600"
+          height="800"
+        >
+        <div class="shop-dropdown-overlay">
+          <h2>BEST SELLERS</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.shop-dropdown-images {
+  padding: 40px 0;
+}
+
+.shop-dropdown-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop-dropdown-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.shop-dropdown-image {
+  position: relative;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
+.shop-dropdown-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.shop-dropdown-item:hover .shop-dropdown-image img {
+  transform: scale(1.05);
+}
+
+.shop-dropdown-overlay {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+}
+
+.shop-dropdown-overlay h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+@media screen and (max-width: 749px) {
+  .shop-dropdown-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .shop-dropdown-overlay h2 {
+    font-size: 1.6rem;
+  }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Shop Dropdown Images",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hoodie_image",
+      "label": "Hoodies Promo Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "best_sellers_image",
+      "label": "Best Sellers Promo Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop Dropdown Images"
+    }
+  ]
+}
+{% endschema %}

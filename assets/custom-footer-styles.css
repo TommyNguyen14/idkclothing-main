@@ -6,6 +6,30 @@
   padding: 60px 0 40px;
 }
 
+/* Footer Shipping Info Bar */
+.footer__shipping-info {
+  background: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.shipping-info-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.shipping-icon {
+  font-size: 1.6rem;
+}
+
 .footer__content-top {
   margin-bottom: 3rem;
 }
@@ -134,15 +158,39 @@
 
 /* Bottom section */
 .footer__content-bottom {
-  text-align: center;
   padding-top: 2rem;
   border-top: 1px solid rgba(var(--color-foreground), 0.1);
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__copyright {
   font-size: 1.2rem;
   color: rgba(var(--color-foreground), 0.6);
   margin: 0;
+}
+
+.footer__social {
+  display: flex;
+  gap: 15px;
+}
+
+.social-link {
+  color: rgba(var(--color-foreground), 0.8);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.social-link:hover {
+  color: rgb(var(--color-foreground));
+}
+
+.social-icon {
+  font-size: 1.8rem;
 }
 
 /* Shipping/Payment info */
@@ -185,6 +233,17 @@
   
   .footer__list-social {
     gap: 2rem;
+  }
+  
+  .footer__bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .footer__shipping-info {
+    flex-direction: column;
+    gap: 10px;
   }
 }
 

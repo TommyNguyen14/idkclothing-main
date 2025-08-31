@@ -1,5 +1,9 @@
 {
   "sections": {
+    "shop_dropdown_images": {
+      "type": "shop-dropdown-images",
+      "settings": {}
+    },
     "best_sellers_section": {
       "type": "featured-collection",
       "settings": {
@@ -228,6 +232,7 @@
     }
   },
   "order": [
+    "shop_dropdown_images",
     "best_sellers_section",
     "summer_tees_section", 
     "basics_collection_header",

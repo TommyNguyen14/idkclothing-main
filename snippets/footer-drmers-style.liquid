@@ -8,9 +8,18 @@
   <div class="footer__content-top page-width">
     <!-- Shipping Info Bar -->
     <div class="footer__shipping-info">
-      <p>Worldwide Shipping</p>
-      <p>Secure Checkout</p>
-      <p>Easy Exchange & Returns</p>
+      <div class="shipping-info-item">
+        <span class="shipping-icon">🚚</span>
+        <span>Worldwide Shipping</span>
+      </div>
+      <div class="shipping-info-item">
+        <span class="shipping-icon">🔒</span>
+        <span>Secure Checkout</span>
+      </div>
+      <div class="shipping-info-item">
+        <span class="shipping-icon">🔄</span>
+        <span>Easy Exchange & Returns</span>
+      </div>
     </div>
 
     <!-- Main Footer Content -->
@@ -43,9 +52,7 @@
     <div class="footer-block--newsletter">
       {%- if section.settings.newsletter_enable -%}
         <div class="footer-block__newsletter">
-          {%- if section.settings.newsletter_heading != blank -%}
-            <h2 class="footer-block__heading inline-richtext">{{ section.settings.newsletter_heading }}</h2>
-          {%- endif -%}
+          <h2 class="footer-block__heading">GET 10% OFF YOUR FIRST ORDER BY JOINING THE CLUB.</h2>
           <p>Stay updated about the latest releases and get exclusive deals :-)</p>
           
           {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form' -%}
@@ -69,7 +76,7 @@
                   {% elsif form.posted_successfully? %}
                     aria-describedby="ContactFooter-success"
                   {% endif %}
-                  placeholder="claim my 10% discount"
+                  placeholder="Enter your Email"
                   required
                 >
                 <label class="field__label" for="NewsletterForm--{{ section.id }}">
@@ -82,9 +89,7 @@
                   id="Subscribe"
                   aria-label="{{ 'newsletter.button_label' | t }}"
                 >
-                  <span class="svg-wrapper">
-                    {{- 'icon-arrow.svg' | inline_asset_content -}}
-                  </span>
+                  CLAIM MY 10% DISCOUNT
                 </button>
               </div>
               {%- if form.errors -%}
@@ -130,6 +135,21 @@
 
   <!-- Bottom Copyright Section -->
   <div class="footer__content-bottom page-width">
-    <p class="footer__copyright">© {{ 'now' | date: '%Y' }} idk. CLUB ALL RIGHTS RESERVED.</p>
+    <div class="footer__bottom">
+      <div class="footer__copyright">
+        <p>© 2025 idk. CLUB ALL RIGHTS RESERVED.</p>
+      </div>
+      <div class="footer__social">
+        <a href="#" class="social-link">
+          <span class="social-icon">📷</span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="social-icon">📌</span>
+        </a>
+        <a href="#" class="social-link">
+          <span class="social-icon">🎵</span>
+        </a>
+      </div>
+    </div>
   </div>
 </footer>
