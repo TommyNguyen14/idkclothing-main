@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Return Policy",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We want you to love your idk. CLUB pieces. If you're not completely satisfied, we're here to help with easy returns and exchanges.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "returns": {
+          "type": "column",
+          "settings": {
+            "title": "Return Process",
+            "text": "<p>• 30-day return window</p><p>• Items must be unworn and unwashed</p><p>• Original tags must be attached</p><p>• Return shipping label provided</p>"
+          }
+        },
+        "exchanges": {
+          "type": "column",
+          "settings": {
+            "title": "Exchanges",
+            "text": "<p>• Free size exchanges</p><p>• Color exchanges available</p><p>• Subject to availability</p><p>• Quick processing</p>"
+          }
+        },
+        "refunds": {
+          "type": "column",
+          "settings": {
+            "title": "Refunds",
+            "text": "<p>• Processed within 5-7 days</p><p>• Returned to original payment</p><p>• Return shipping costs covered</p><p>• Full refund for eligible items</p>"
+          }
+        }
+      },
+      "block_order": [
+        "returns",
+        "exchanges",
+        "refunds"
+      ],
+      "settings": {
+        "title": "Return & Exchange Details",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text",
+    "multicolumn"
+  ]
+}

@@ -31,9 +31,6 @@
                 <a href="/collections/all" class="mega-menu__link mega-menu__link--level-2 link">
                   SHOP ALL →
                 </a>
-                <a href="/collections/best-sellers" class="mega-menu__link mega-menu__link--level-2 link">
-                  BEST SELLERS
-                </a>
                 <a href="/collections/hoodies" class="mega-menu__link mega-menu__link--level-2 link">
                   HOODIES
                 </a>
@@ -58,6 +55,70 @@
                 <a href="/collections/small-goods" class="mega-menu__link mega-menu__link--level-2 link">
                   SMALL GOODS
                 </a>
+              </div>
+            </div>
+            
+            <!-- Featured Products Section -->
+            <div class="mega-menu__featured page-width">
+              <div class="mega-menu__featured-header">
+                <h3 class="mega-menu__featured-title">BEST SELLERS</h3>
+              </div>
+              <div class="mega-menu__featured-grid">
+                {%- for product in collections.best-sellers.products limit: 4 -%}
+                  <div class="mega-menu__product-card">
+                    <a href="{{ product.url }}" class="mega-menu__product-link">
+                      <div class="mega-menu__product-image">
+                        {%- if product.featured_media -%}
+                          <img
+                            src="{{ product.featured_media | image_url: width: 200 }}"
+                            alt="{{ product.featured_media.alt | escape }}"
+                            class="mega-menu__product-img"
+                            loading="lazy"
+                            width="200"
+                            height="200"
+                          >
+                          {%- if product.media[1] != null -%}
+                            <img
+                              src="{{ product.media[1] | image_url: width: 200 }}"
+                              alt="{{ product.media[1].alt | escape }}"
+                              class="mega-menu__product-img mega-menu__product-img--hover"
+                              loading="lazy"
+                              width="200"
+                              height="200"
+                            >
+                          {%- endif -%}
+                        {%- else -%}
+                          <div class="mega-menu__product-placeholder">
+                            {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                          </div>
+                        {%- endif -%}
+                      </div>
+                      <div class="mega-menu__product-info">
+                        <h4 class="mega-menu__product-title">{{ product.title | escape }}</h4>
+                        <div class="mega-menu__product-price">
+                          <span class="price">{{ product.price | money_with_currency }}</span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                {%- else -%}
+                  <!-- Fallback products when no best sellers collection exists -->
+                  {%- for i in (1..4) -%}
+                    <div class="mega-menu__product-card">
+                      <div class="mega-menu__product-image">
+                        <div class="mega-menu__product-placeholder">
+                          {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                        </div>
+                      </div>
+                      <div class="mega-menu__product-info">
+                        <h4 class="mega-menu__product-title">Example Product Title</h4>
+                        <div class="mega-menu__product-price">
+                          <span class="price">$19.99 USD</span>
+                        </div>
+                      </div>
+                    </div>
+                  {%- endfor -%}
+                {%- endfor -%}
               </div>
             </div>
           </div>

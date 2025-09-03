@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Care Instructions",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Proper care will help your idk. CLUB pieces last longer and look their best. Follow these care instructions to maintain the quality of your garments.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "washing": {
+          "type": "column",
+          "settings": {
+            "title": "Washing",
+            "text": "<p>• Machine wash cold with like colors</p><p>• Use mild detergent</p><p>• Avoid bleach and fabric softeners</p><p>• Turn garments inside out before washing</p>"
+          }
+        },
+        "drying": {
+          "type": "column",
+          "settings": {
+            "title": "Drying",
+            "text": "<p>• Tumble dry on low heat</p><p>• Remove promptly to prevent wrinkles</p><p>• For delicate items, air dry flat</p><p>• Avoid high heat settings</p>"
+          }
+        },
+        "ironing": {
+          "type": "column",
+          "settings": {
+            "title": "Ironing & Storage",
+            "text": "<p>• Iron on low heat if needed</p><p>• Store in a cool, dry place</p><p>• Avoid direct sunlight</p><p>• Use padded hangers for delicate items</p>"
+          }
+        }
+      },
+      "block_order": [
+        "washing",
+        "drying",
+        "ironing"
+      ],
+      "settings": {
+        "title": "Care Guidelines",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text",
+    "multicolumn"
+  ]
+}

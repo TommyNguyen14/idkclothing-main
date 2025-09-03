@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Size Guide",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Find your perfect fit with our comprehensive size guide. All measurements are in inches and are taken from the body, not the garment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn": {
+      "type": "multicolumn",
+      "blocks": {
+        "tops": {
+          "type": "column",
+          "settings": {
+            "title": "Tops (Hoodies, Tees, Knitwear)",
+            "text": "<p><strong>XS:</strong> Chest 32-34\", Length 24\"</p><p><strong>S:</strong> Chest 34-36\", Length 25\"</p><p><strong>M:</strong> Chest 36-38\", Length 26\"</p><p><strong>L:</strong> Chest 38-40\", Length 27\"</p><p><strong>XL:</strong> Chest 40-42\", Length 28\"</p><p><strong>XXL:</strong> Chest 42-44\", Length 29\"</p>"
+          }
+        },
+        "bottoms": {
+          "type": "column",
+          "settings": {
+            "title": "Bottoms (Denim, Pants)",
+            "text": "<p><strong>XS:</strong> Waist 28-30\", Inseam 30\"</p><p><strong>S:</strong> Waist 30-32\", Inseam 31\"</p><p><strong>M:</strong> Waist 32-34\", Inseam 32\"</p><p><strong>L:</strong> Waist 34-36\", Inseam 33\"</p><p><strong>XL:</strong> Waist 36-38\", Inseam 34\"</p><p><strong>XXL:</strong> Waist 38-40\", Inseam 35\"</p>"
+          }
+        },
+        "measurement": {
+          "type": "column",
+          "settings": {
+            "title": "How to Measure",
+            "text": "<p><strong>Chest:</strong> Measure around the fullest part of your chest</p><p><strong>Waist:</strong> Measure around your natural waistline</p><p><strong>Length:</strong> Measure from shoulder to desired length</p><p><strong>Inseam:</strong> Measure from crotch to desired length</p>"
+          }
+        }
+      },
+      "block_order": [
+        "tops",
+        "bottoms",
+        "measurement"
+      ],
+      "settings": {
+        "title": "Size Charts",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "background-2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text",
+    "multicolumn"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Terms of Service",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Last updated:</strong> January 2025</p><p>These Terms of Service govern your use of the idk. CLUB website and services. By accessing or using our services, you agree to be bound by these terms.</p><h3>Use of Our Services</h3><p>You may use our services for lawful purposes only. You agree not to use our services in any way that violates any applicable federal, state, local, or international law or regulation.</p><h3>Intellectual Property</h3><p>All content on this website, including text, graphics, logos, and images, is the property of idk. CLUB and is protected by copyright laws.</p><h3>Limitation of Liability</h3><p>idk. CLUB shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of our services.</p><h3>Contact Information</h3><p>For questions about these Terms of Service, please contact us at legal@idkclub.com.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "desktop_content_position": "left",
+        "content_alignment": "left",
+        "color_scheme": "background-1",
+        "full_width": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "main",
+    "rich_text"
+  ]
+}

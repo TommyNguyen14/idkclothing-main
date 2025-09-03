@@ -10,30 +10,31 @@
 {
   "sections": {
     "main": {
-      "type": "main-page", 
+      "type": "main-page",
       "settings": {
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
-    "clubhouse_hero": {
+    "rich_text": {
       "type": "rich-text",
       "blocks": {
         "heading": {
           "type": "heading",
           "settings": {
             "heading": "Welcome to the Clubhouse",
-            "heading_size": "h0"
+            "heading_size": "h1"
           }
         },
         "text": {
           "type": "text",
           "settings": {
-            "text": "<p>This is where our community comes together. Share your style, connect with others, and be part of something bigger.</p>"
+            "text": "<p>This is your exclusive space within idk. CLUB. Here you'll find early access to new releases, member-only content, and special perks that are just for our most dedicated fans.</p><p>Stay tuned for exclusive drops, behind-the-scenes content, and special events that will make you feel like part of something truly special.</p>"
           }
         }
       },
-      "block_order": ["heading", "text"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -43,64 +44,40 @@
         "padding_bottom": 52
       }
     },
-    "community_features": {
-      "type": "multicolumn",
+    "image_banner": {
+      "type": "image-banner",
       "blocks": {
-        "feature_1": {
-          "type": "column",
+        "heading": {
+          "type": "heading",
           "settings": {
-            "title": "Style Sharing",
-            "text": "<p>Show off your idk. CLUB fits and get inspired by others in the community.</p>",
-            "link_label": "Share Your Style",
-            "link": "#"
+            "heading": "Exclusive Member Benefits",
+            "heading_size": "h2"
           }
         },
-        "feature_2": {
-          "type": "column",
+        "text": {
+          "type": "text",
           "settings": {
-            "title": "Exclusive Access",
-            "text": "<p>Club members get early access to new drops and exclusive member-only content.</p>",
-            "link_label": "Join the Club",
-            "link": "#"
-          }
-        },
-        "feature_3": {
-          "type": "column",
-          "settings": {
-            "title": "Events & Meetups",
-            "text": "<p>Connect IRL with fellow club members at events, pop-ups, and exclusive gatherings.</p>",
-            "link_label": "View Events",
-            "link": "#"
+            "text": "<p>Early access to new collections • Member-only discounts • Exclusive content • VIP events</p>"
           }
         }
       },
-      "block_order": ["feature_1", "feature_2", "feature_3"],
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
-        "title": "What's Inside",
-        "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "center",
-        "background_style": "none",
-        "button_label": "",
-        "button_link": "",
-        "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "height": "medium",
+        "desktop_text_box_position": "center",
+        "full_width": true,
+        "color_scheme": "background-2",
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "newsletter_signup": {
-      "type": "newsletter",
-      "settings": {
-        "color_scheme": "accent-1",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
-  "order": ["main", "clubhouse_hero", "community_features", "newsletter_signup"]
+  "order": [
+    "main",
+    "rich_text",
+    "image_banner"
+  ]
 }

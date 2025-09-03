@@ -3,16 +3,61 @@
     "main": {
       "type": "main-page",
       "settings": {
+      }
+    },
+    "contact_form": {
+      "type": "contact-form",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get in Touch",
+            "heading_size": "h1"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Have a question or want to say hello? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "form": {
-      "type": "contact-form",
+    "rich_text": {
+      "type": "rich-text",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Other Ways to Reach Us",
+            "heading_size": "h2"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Email:</strong> hello@idkclub.com</p><p><strong>Customer Service:</strong> support@idkclub.com</p><p><strong>Business Inquiries:</strong> business@idkclub.com</p><p><strong>Response Time:</strong> We typically respond within 24 hours during business days.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "scheme-1",
+        "desktop_content_position": "center",
+        "content_alignment": "left",
+        "color_scheme": "background-2",
+        "full_width": false,
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -20,6 +65,7 @@
   },
   "order": [
     "main",
-    "form"
+    "contact_form",
+    "rich_text"
   ]
 }

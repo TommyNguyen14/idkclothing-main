@@ -593,3 +593,51 @@
     clip-path: polygon(var(--shape--blob-5));
   }
 }
+
+/* Product Card Title and Price Styling */
+.card__title-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.card__price-wrapper {
+  margin-top: 0.5rem;
+}
+
+.card__price {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.card__price .price__regular .price-item--regular {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card__price .price__sale .price-item--sale {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.card__price .price__compare .price-item--regular {
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+/* Ensure consistent font inheritance */
+.card__heading,
+.card__title-text,
+.card__price,
+.card__price * {
+  font-family: inherit;
+}
